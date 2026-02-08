@@ -1,14 +1,16 @@
 const config = {
-  title: "Naresh Khatri | Full-Stack Developer",
+  title: "Nihar Vasavada | learning ",
   description: {
-    long: "Explore the portfolio of Naresh, a full-stack developer and creative technologist specializing in interactive web experiences, 3D animations, and innovative projects. Discover my latest work, including Coding Ducks, The Booking Desk, Ghostchat, and more. Let's build something amazing together!",
+    long: "I’m a 12th-grade student exploring the world of programming and web development.
+Currently learning Python and frontend basics, and building skills step by step
+with a strong interest in creating clean and interactive websites.",
     short:
       "Discover the portfolio of Naresh, a full-stack developer creating interactive web experiences and innovative projects.",
   },
   keywords: [
-    "Naresh",
+    "Nihar",
     "portfolio",
-    "full-stack developer",
+    "learning",
     "creative technologist",
     "web development",
     "3D animations",
@@ -23,23 +25,23 @@ const config = {
     "Spline",
     "Framer Motion",
   ],
-  author: "Naresh Khatri",
-  email: "naresh.khatri2345@gmail.com",
+  author: "Nihar vasavada",
+  email: "niharvasavda@gmail.com",
   site: "https://nareshkhatri.site",
 
   // for github stars button
-  githubUsername: "naresh-khatri",
+  githubUsername: "Nihar2828n",
   githubRepo: "3d-portfolio",
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "https://x.com/nothotchaddi",
-    linkedin: "https://www.linkedin.com/in/naresh-khatri/",
-    instagram: "https://www.instagram.com/hotchaddi",
+    twitter: "https://x.com/Nihar2828n",
+    linkedin: "https://www.linkedin.com/in/Niharvasavada/",
+    instagram: "https://www.instagram.com/nihar_vasavada",
     facebook: "https://www.facebook.com/HotChaddi/",
-    github: "https://github.com/Naresh-Khatri",
+    github: "https://github.com/Nihar2828n",
   },
 };
 export { config };
