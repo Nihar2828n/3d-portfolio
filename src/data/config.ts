@@ -24,7 +24,7 @@ description: {
   ],
   author: "Nihar vasavada",
   email: "niharvasavda@gmail.com",
-  site: "https://nareshkhatri.site",
+  site: "https://aboutnihar.vercel.app",
 
   // for github stars button
   githubUsername: "Nihar2828n",
