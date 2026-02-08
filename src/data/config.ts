@@ -37,10 +37,10 @@ with a strong interest in creating clean and interactive websites.",
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "https://x.com/Nihar2828n",
+    twitter: "https://x.com/N_I_H_A_R_2_8",
     linkedin: "https://www.linkedin.com/in/Niharvasavada/",
     instagram: "https://www.instagram.com/nihar_vasavada",
-    facebook: "https://www.facebook.com/HotChaddi/",
+    facebook: "https://www.facebook.com/Nihar2828n/",
     github: "https://github.com/Nihar2828n",
   },
 };
