@@ -55,7 +55,7 @@ const CONTACT_LINKS = [
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/niharvasavada/",
+    href: "https://www.linkedin.com/in/Nihar vasavada/",
     content: "/niharvasavada",
     icon: <FaLinkedin height={"50px"} />,
   },
