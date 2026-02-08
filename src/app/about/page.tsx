@@ -61,7 +61,7 @@ const CONTACT_LINKS = [
   },
   {
     name: "GitHub",
-    href: "https://github.com/Nihar-vasavada",
+    href: "https://github.com/Nihar2828n",
     content: "/nihar-vasavada",
     icon: <FaGithub height={"50px"} />,
   },
