@@ -1,9 +1,9 @@
 const config = {
   title: "Nihar Vasavada | learning ",
   description: {
-    description: {
   long: "I’m a 12th-grade student exploring the world of programming and web development. Currently learning Python and frontend basics, and building skills step by step with a strong interest in creating clean and interactive websites.",
   short: "Discover the portfolio of Nihar Vasavada."
+},
 },
   keywords: [
     "Nihar",
