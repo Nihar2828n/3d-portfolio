@@ -282,29 +282,7 @@ by building my own portfolio website as a learning project..",
       SkillNames.GCP,
     ],
   },
-  {
-    id: 2,
-    startDate: "Apr 2022",
-    endDate: "Dec 2024",
-    title: "Freelance Full Stack Developer",
-    company: "Self-employed",
-    description: [
-      "Transformed chaotic Excel sheets into polished internal tools for various clients.",
-      "Shipped dashboards and custom CMS platforms tailored to each client's workflow.",
-      "Automated repetitive processes, improving efficiency and reducing human error.",
-      "Focused on clean, maintainable code and interfaces that users actually enjoy.",
-    ],
-    skills: [
-      SkillNames.REACT,
-      SkillNames.VUE,
-      SkillNames.NODEJS,
-      SkillNames.EXPRESS,
-      SkillNames.MONGODB,
-      SkillNames.POSTGRES,
-      SkillNames.TAILWIND,
-      SkillNames.WORDPRESS,
-    ],
-  },
+  
 ];
 
 export const themeDisclaimers = {
