@@ -7,8 +7,8 @@ export default function MusicPlayer() {
     const audioElement = document.getElementById("bg-music") as HTMLAudioElement;
     
     if (audioElement) {
-      // Set volume to 20%
-      audioElement.volume = 0.2;
+      // Set volume to 70%
+      audioElement.volume = 0.7;
       
       // Try to autoplay
       const playAudio = async () => {
