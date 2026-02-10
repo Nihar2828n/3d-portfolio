@@ -268,7 +268,7 @@ export const EXPERIENCE: Experience[] = [
   "My focus is on understanding the fundamentals of how the web works — from structuring pages with HTML, styling them with CSS, and learning logical problem-solving using Python.",
   "I actively work on improving my skills through hands-on practice, small experiments, and by building my own portfolio website as a learning project."
 ],
-    ],
+    
     skills: [
   SkillNames.HTML,
   SkillNames.CSS,
