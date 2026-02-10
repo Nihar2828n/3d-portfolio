@@ -67,13 +67,18 @@ export default function RootLayout({
         {/* <Analytics /> */}
       </head>
       <body>
-        <Providers>
-          <Header />
-          {children}
-          <Footer />
-          <AppOverlays />
-        </Providers>
-      </body>
+  <Providers>
+    <Header />
+    {children}
+    <Footer />
+    <AppOverlays />
+    
+    <audio id="bg-music" loop>
+      <source src="/music/bg.m4a" type="audio/mp4" />
+    </audio>
+    
+  </Providers>
+</body>
     </html>
   );
 }
