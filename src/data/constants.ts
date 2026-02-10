@@ -1,4 +1,4 @@
-Bhai// thoda zada ts ho gya idhar
+// Bhai thoda zada ts ho gya idhar
 export enum SkillNames {
   JS = "js",
   TS = "ts",
