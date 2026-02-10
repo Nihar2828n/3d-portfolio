@@ -32,7 +32,8 @@ export default function MusicPlayer() {
       {/* Small Vinyl Disc Button - Top Left */}
       <button
         onClick={toggleMusic}
-        className="fixed top-6 left-6 z-50 group"
+        className="fixed top-6 left-6 z-50"
+        aria-label="Toggle Music"
       >
         {/* Mini Vinyl Disc */}
         <div className={`relative w-16 h-16 rounded-full bg-gradient-to-br from-gray-900 via-black to-gray-800 shadow-2xl border-2 border-white/20 hover:scale-110 transition-all duration-300 ${isPlaying ? 'animate-spin-slow' : ''}`}>
@@ -41,7 +42,7 @@ export default function MusicPlayer() {
           <div className="absolute inset-2 rounded-full border border-white/10"></div>
           
           {/* Center with your image */}
-          <div className="absolute inset-3 rounded-full bg-white overflow-hidden flex items-center justify-center shadow-inner">
+          <div className="absolute inset-3 rounded-full bg-cyan-400 overflow-hidden flex items-center justify-center shadow-inner">
             <Image
               src="/images/what-did-i-miss.png"
               alt="Music"
@@ -52,17 +53,12 @@ export default function MusicPlayer() {
           </div>
 
           {/* Center hole */}
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="w-3 h-3 rounded-full bg-black border border-yellow-400"></div>
           </div>
 
           {/* Glass effect overlay */}
-          <div className="absolute inset-0 rounded-full bg-white/5 backdrop-blur-sm" 
-               style={{
-                 backdropFilter: 'blur(10px)',
-                 WebkitBackdropFilter: 'blur(10px)',
-               }}>
-          </div>
+          <div className="absolute inset-0 rounded-full bg-white/5 backdrop-blur-sm pointer-events-none"></div>
         </div>
       </button>
 
