@@ -263,11 +263,12 @@ export const EXPERIENCE: Experience[] = [
     title: "Self-Taught Web Development Learner",
     company: "Independent / Self-Learning",
     description: [
-  "I am a 12th-grade student currently exploring the world of web development from scratch.",
-  "With no formal coding background, I started learning by experimenting, breaking things, and rebuilding them until they worked.",
-  "My focus is on understanding the fundamentals of how the web works — from structuring pages with HTML, styling them with CSS, and learning logical problem-solving using Python.",
-  "I actively work on improving my skills through hands-on practice, small experiments, and by building my own portfolio website as a learning project."
-],
+  description: [
+      "I am a 12th-grade student currently exploring the world of web development from scratch.",
+      "With no formal coding background, I started learning by experimenting, breaking things, and rebuilding them until they worked.",
+      "My focus is on understanding the fundamentals of how the web works — from structuring pages with HTML, styling them with CSS, and learning logical problem-solving using Python.",
+      "I actively work on improving my skills through hands-on practice, small experiments, and by building my own portfolio website as a learning project."
+    ],
     
     skills: [
   SkillNames.HTML,
