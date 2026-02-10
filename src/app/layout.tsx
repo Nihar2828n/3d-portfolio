@@ -8,6 +8,7 @@ import Footer from "@/components/footer/footer";
 import Script from "next/script";
 import AppOverlays from "@/components/app-overlays";
 import { Providers } from "@/components/providers";
+import MusicPlayer from "@/components/music-player";
 
 export const metadata: Metadata = {
   title: config.title,
@@ -15,21 +16,6 @@ export const metadata: Metadata = {
   keywords: config.keywords,
   authors: [{ name: config.author }],
   openGraph: {
-    title: config.title,
-    description: config.description.short,
-    url: config.site,
-    images: [
-      {
-        url: config.ogImg,
-        width: 800,
-        height: 600,
-        alt: "Portfolio preview",
-      },
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
     title: config.title,
     description: config.description.short,
     images: [config.ogImg],
@@ -67,18 +53,20 @@ export default function RootLayout({
         {/* <Analytics /> */}
       </head>
       <body>
-  <Providers>
-    <Header />
-    {children}
-    <Footer />
-    <AppOverlays />
-    
-    <audio id="bg-music" loop>
-      <source src="/music/bg.m4a" type="audio/mp4" />
-    </audio>
-    
-  </Providers>
-</body>
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+          <AppOverlays />
+          
+          <audio id="bg-music" loop>
+            <source src="/music/bg.m4a" type="audio/mp4" />
+          </audio>
+          
+          <MusicPlayer />
+          
+        </Providers>
+      </body>
     </html>
   );
 }
