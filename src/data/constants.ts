@@ -272,7 +272,7 @@ export const EXPERIENCE: Experience[] = [
     skills: [
   SkillNames.HTML,
   SkillNames.CSS,
-  SkillNames.PYTHON,
+  SkillNames.GITHUB,
   SkillNames.GIT,
 ],
     
