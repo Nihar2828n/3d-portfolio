@@ -1,4 +1,4 @@
-// thoda zada ts ho gya idhar
+Bhai// thoda zada ts ho gya idhar
 export enum SkillNames {
   JS = "js",
   TS = "ts",
@@ -260,13 +260,16 @@ export const EXPERIENCE: Experience[] = [
     id: 1,
     startDate: "Dec 2024",
     endDate: "Present",
-    title: "Full Stack Developer",
-    company: "OmniNexus Sdn Bhd",
+    title: "Self-Taught Web Development Learner",
+    company: "-",
     description: [
-      "Built a custom image editor from scratch, cutting $4.8k/year in SaaS costs.",
-      "Architected async job queues processing 1k+ AI tasks daily with bulletproof reliability.",
-      "Optimized media delivery pipeline, slashing asset load times by 40%.",
-      "Shipped high-impact features end-to-end from requirements to production.",
+      " I am a 12th-grade student currently exploring the world of web development from scratch.
+With no formal coding background, I started learning by experimenting, breaking things,
+and rebuilding them until they worked.
+My focus is on understanding the fundamentals of how the web works — from structuring
+pages with HTML, styling them with CSS, and learning logical problem-solving using Python.
+I actively work on improving my skills through hands-on practice, small experiments, and
+by building my own portfolio website as a learning project..",
     ],
     skills: [
       SkillNames.NEXTJS,
