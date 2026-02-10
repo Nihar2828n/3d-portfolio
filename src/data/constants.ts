@@ -261,7 +261,7 @@ export const EXPERIENCE: Experience[] = [
     startDate: "Dec 2024",
     endDate: "Present",
     title: "Self-Taught Web Development Learner",
-    company: "-",
+    company: "Independent / Self-Learning",
     description: [
       " I am a 12th-grade student currently exploring the world of web development from scratch.
 With no formal coding background, I started learning by experimenting, breaking things,
