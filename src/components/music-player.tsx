@@ -1,132 +1,85 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
-export default function MusicBar() {
-  const [visible, setVisible] = useState(false);
-  const [playing, setPlaying] = useState(false);
-  const [volume, setVolume] = useState(0.5);
+export default function MusicPlayer() {
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    const audio = document.getElementById("bg-music") as HTMLAudioElement;
-    if (!audio) return;
-
-    audio.volume = volume;
-
-    const saved = localStorage.getItem("music-playing");
-    if (saved === "true") {
-      audio.play().catch(() => {});
+    const audioElement = document.getElementById("bg-music") as HTMLAudioElement;
+    if (audioElement) {
+      audioElement.volume = 0.7;
     }
-
-    const onPlay = () => {
-      setPlaying(true);
-      setVisible(true);
-      localStorage.setItem("music-playing", "true");
-    };
-
-    const onPause = () => {
-      setPlaying(false);
-      setVisible(false);
-      localStorage.setItem("music-playing", "false");
-    };
-
-    audio.addEventListener("play", onPlay);
-    audio.addEventListener("pause", onPause);
-
-    return () => {
-      audio.removeEventListener("play", onPlay);
-      audio.removeEventListener("pause", onPause);
-    };
-  }, [volume]);
+  }, []);
 
   const toggleMusic = () => {
-    const audio = document.getElementById("bg-music") as HTMLAudioElement;
-    if (!audio) return;
-    audio.paused ? audio.play() : audio.pause();
+    const audioElement = document.getElementById("bg-music") as HTMLAudioElement;
+    
+    if (!audioElement) return;
+
+    if (isPlaying) {
+      audioElement.pause();
+      setIsPlaying(false);
+    } else {
+      audioElement.play();
+      setIsPlaying(true);
+    }
   };
 
   return (
-    <div
-      style={{
-        position: "fixed",
-        top: "16px",
-        left: "16px",
-        height: "40px",
-        padding: "0 14px",
-        display: "flex",
-        alignItems: "center",
-        gap: "12px",
-        backdropFilter: "blur(14px)",
-        background: "rgba(15,15,15,0.6)",
-        border: "1px solid rgba(255,255,255,0.1)",
-        borderRadius: "999px",
-        transform: visible ? "translateX(0)" : "translateX(-130%)",
-        transition: "transform 0.45s cubic-bezier(.4,0,.2,1)",
-        zIndex: 9999,
-        color: "#1DB954",
-        fontSize: "12px",
-      }}
-    >
-      {/* Waveform */}
-      <div style={{ display: "flex", gap: "3px" }}>
-        {[1, 2, 3].map((i) => (
-          <span
-            key={i}
-            style={{
-              width: "3px",
-              height: playing ? "14px" : "6px",
-              background: "#1DB954",
-              animation: playing
-                ? `wave 0.${i + 3}s infinite ease-in-out`
-                : "none",
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Track Info */}
-      <div style={{ whiteSpace: "nowrap" }}>
-        <strong>Background Vibes</strong>
-      </div>
-
-      {/* Play / Pause */}
+    <>
+      {/* Small Vinyl Disc Button - Top Left */}
       <button
         onClick={toggleMusic}
-        style={{
-          background: "none",
-          border: "none",
-          color: "#1DB954",
-          cursor: "pointer",
-          fontSize: "14px",
-        }}
+        className="fixed top-6 left-6 z-50 group"
       >
-        {playing ? "❚❚" : "▶"}
+        {/* Mini Vinyl Disc */}
+        <div className={`relative w-16 h-16 rounded-full bg-gradient-to-br from-gray-900 via-black to-gray-800 shadow-2xl border-2 border-white/20 hover:scale-110 transition-all duration-300 ${isPlaying ? 'animate-spin-slow' : ''}`}>
+          {/* Grooves */}
+          <div className="absolute inset-1 rounded-full border border-white/10"></div>
+          <div className="absolute inset-2 rounded-full border border-white/10"></div>
+          
+          {/* Center with your image */}
+          <div className="absolute inset-3 rounded-full bg-white overflow-hidden flex items-center justify-center shadow-inner">
+            <Image
+              src="/images/what-did-i-miss.png"
+              alt="Music"
+              width={40}
+              height={40}
+              className="object-cover"
+            />
+          </div>
+
+          {/* Center hole */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-3 h-3 rounded-full bg-black border border-yellow-400"></div>
+          </div>
+
+          {/* Glass effect overlay */}
+          <div className="absolute inset-0 rounded-full bg-white/5 backdrop-blur-sm" 
+               style={{
+                 backdropFilter: 'blur(10px)',
+                 WebkitBackdropFilter: 'blur(10px)',
+               }}>
+          </div>
+        </div>
       </button>
 
-      {/* Volume */}
-      <input
-        type="range"
-        min="0"
-        max="1"
-        step="0.01"
-        value={volume}
-        onChange={(e) => setVolume(Number(e.target.value))}
-        style={{ width: "60px" }}
-      />
-
       <style jsx>{`
-        @keyframes wave {
-          0% {
-            height: 6px;
+        @keyframes spin-slow {
+          from {
+            transform: rotate(0deg);
           }
-          50% {
-            height: 16px;
-          }
-          100% {
-            height: 6px;
+          to {
+            transform: rotate(360deg);
           }
         }
+
+        .animate-spin-slow {
+          animation: spin-slow 8s linear infinite;
+        }
       `}</style>
-    </div>
+    </>
   );
 }
