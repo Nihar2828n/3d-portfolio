@@ -31,7 +31,7 @@ description: {
   githubRepo: "3d-portfolio",
 
   get ogImg() {
-    return this.site + "/assets/seo/og-image.png";
+    return this.site + "/assets/seo/og-image1.png";
   },
   social: {
     twitter: "https://x.com/N_I_H_A_R_2_8",
