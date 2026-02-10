@@ -272,15 +272,12 @@ I actively work on improving my skills through hands-on practice, small experime
 by building my own portfolio website as a learning project..",
     ],
     skills: [
-      SkillNames.NEXTJS,
-      SkillNames.TS,
-      SkillNames.REACT,
-      SkillNames.NODEJS,
-      SkillNames.POSTGRES,
-      SkillNames.MONGODB,
-      SkillNames.DOCKER,
-      SkillNames.GCP,
-    ],
+  SkillNames.HTML,
+  SkillNames.CSS,
+  SkillNames.PYTHON,
+  SkillNames.GIT,
+],
+    
   },
   
 ];
